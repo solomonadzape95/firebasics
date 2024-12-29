@@ -4,10 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <script src="https://www.gstatic.com/firebasejs/11.1.0/firebase-app-compat.js"></script>
+    <!-- <script src="https://www.gstatic.com/firebasejs/11.1.0/firebase-app-compat.js"></script>
     <script src="https://www.gstatic.com/firebasejs/11.1.0/firebase-firestore-compat.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/11.1.0/firebase-auth-compat.js"></script>
-    <script type="module">
+    <script src="https://www.gstatic.com/firebasejs/11.1.0/firebase-auth-compat.js"></script> -->
+    <!-- <script>
       // Import the functions you need from the SDKs you need
       import { initializeApp } from "https://www.gstatic.com/firebasejs/11.1.0/firebase-app.js";
       import { getAnalytics } from "https://www.gstatic.com/firebasejs/11.1.0/firebase-analytics.js";
@@ -29,8 +29,25 @@
       // Initialize Firebase
       const app = initializeApp(firebaseConfig);
       const analytics = getAnalytics(app);
-    </script>
-    <script src="./app.js" defer></script>
+    </script> -->
+    <script src="./app.js" type="module"></script>
   </head>
-  <body></body>
+  <body>
+    <h1>My Very Awesome App</h1>
+    <div id="signedIn" hidden="true">
+      <button id="signoutbtn">Sign out bruv</button>
+      <div id="userdetails"></div>
+    </div>
+    <div id="signedOut">
+      <button id="signinbtn">Sign in with google bruv</button>
+    </div>
+    <form id="addRecord">
+      <input type="text" id="record-input" placeholder="enter name" />
+      <input type="number" id="route-input" placeholder="enter weight" />
+      <button type="submit">AddData</button>
+    </form>
+    <div id="records">
+      <ul id="rec_list"></ul>
+    </div>
+  </body>
 </html>
